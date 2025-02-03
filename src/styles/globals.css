@@ -8,16 +8,25 @@
   --primary-light: #FDF5E2;
   --primary: #FEDA8C;
   --border: #271400;
+  --footer: #271d12;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --primary-light: #FDF5E2;
+    --primary: #FEDA8C;
+    --border: #271400;
+    --footer: #271d12;
+  }
+  /* :root {
     --background: #0a0a0a;
     --foreground: #ededed;
     --primary-light: #061e1c;
     --primary: #000000;
-  }
-} */
+  } */
+}
 
 html {
   scroll-behavior: smooth;
@@ -25,7 +34,7 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--primary-light);
+  background: var(--footer);
   font-family: Arial, Helvetica, sans-serif;
 }
 

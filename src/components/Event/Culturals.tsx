@@ -21,7 +21,7 @@ const Culturals = () => {
                 {/* <h1 className="text-4xl font-bold text-center mb-8">Cultural Events</h1> */}
                 <div className="flex lg:flex-col gap-6 mt-5">
                     {/* Tab Content on the Left */}
-                    <div className="flex-1 bg-[#271d12] rounded-lg border-2 border-[#C4B7A6] w-2/5 lg:w-full lg:min-h-60 overflow-clip group">
+                    <div className="flex-1  rounded-lg border-2 border-[#C4B7A6] w-2/5 lg:w-full lg:min-h-60 overflow-clip group">
                         <motion.div
                             key={activeIndex}
                             initial={{ x: direction === "right" ? "100%" : "-100%" }}
@@ -32,7 +32,7 @@ const Culturals = () => {
                         >
                             {events[activeIndex].imgurl ? (
                                 <Image
-                                    className="w-full object-cover object-bottom transition-transform ease-in-out duration-700 transform-gpu group-hover:scale-105 h-[31rem] max-h-[31rem] lg:h-[16.6rem] overflow-clip"
+                                    className="w-full object-cover object-center transition-transform ease-in-out duration-700 transform-gpu group-hover:scale-105 h-[31rem] max-h-[31rem] lg:h-[16.6rem] overflow-clip"
                                     sizes="(max-width: 1180px) 100vw, 50vw"
                                     src={`/assets/images/gallery/${events[activeIndex].imgurl}`}
                                     alt={`${events[activeIndex].imgurl}`}
@@ -41,7 +41,7 @@ const Culturals = () => {
                                     height={500}
                                 />
                             ) : (
-                                <div className="p-6 h-[31rem] max-h-[31rem] lg:h-[16.6rem] overflow-clip">
+                                <div className="p-6 bg-[#271d12] h-[31rem] max-h-[31rem] lg:h-[16.6rem] overflow-clip">
                                     <h2 className="text-2xl font-semibold text-primary-light">{events[activeIndex].title}</h2>
                                     <p className="text-lg text-primary">{events[activeIndex].description}</p>
                                 </div>
