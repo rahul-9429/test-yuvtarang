@@ -67,7 +67,7 @@ export default function Home() {
 
         {/* Main Section */}
         <section ref={sectionRef} className="relative w-full min-h-[calc(100vh-8.5rem)] flex flex-col justify-between z-50">
-          <div className="flex flex-col">
+          <div className="relative max-container flex flex-col w-full">
             <div ref={(el) => setElementRef(el, 0)} className="w-full space-y-10 lg:space-y-5 mt-5 max-container z-50 justify-items-center">
               {/* Optimized Image */}
               <div>
@@ -102,16 +102,29 @@ export default function Home() {
             </div>
 
             {/* Register Button */}
-            <div ref={(el) => setElementRef(el, 3)} className="flex items-center justify-center md:mt-10 relative">
-              <Link target="_blank" href="/register" className="mt-10 sm:mt-0">
+            <div ref={(el) => setElementRef(el, 3)} className="flex flex-col items-center justify-center md:mt-4 relative">
+              <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdwfi7gvDeimrba1SEJmtF4CE38J-AWXjb3n__BR55outWoIw/formrestricted" className="mt-10 sm:mt-0">
                 <button className="relative w-[180px] h-[40px] border-none rounded-[10px] bg-gradient-to-r from-[#77530a] via-[#ffd277] to-[#77530a] bg-[250%] text-[#ffd277] flex items-center justify-center cursor-pointer transition-all duration-200 overflow-hidden active:scale-95 hover:bg-right">
                   <span className="absolute top-0.5 w-[97%] h-[90%] rounded-[8px] flex items-center justify-center bg-black bg-opacity-80 transition-all duration-1000 hover:bg-right">
                     REGISTER NOW
                   </span>
                 </button>
               </Link>
-              <div className="absolute top-20 lg:top-10 flex items-center justify-center my-4">
-                <Image src={REGISTER_QR_CODE} alt="qr-code" className="w-40 h-40 lg:w-60 lg:h-60" />
+              <div className="hidden lg:flex items-center justify-center my-4">
+                <div className="bg-footer p-1 rounded-lg">
+                  <div className="-mb-4 h-12 w-full text-primary text-center pt-2 bg-footer text-xs uppercase font-serif tracking-wide">
+                    Register with QR
+                  </div>
+                  <Image src={REGISTER_QR_CODE} alt="qr-code" className=" mix-blend-screen w-72 h-72 lg:w-60 lg:h-60" />
+                </div>
+              </div>
+            </div>
+            <div className="absolute flex flex-col top-6 right-[5%] 2xl:right-[1%] lg:top-10 items-center justify-center my-4 lg:hidden">
+              <div className="bg-footer p-1 rounded-lg">
+                <div className="-mb-4 h-14 w-full text-primary text-center pt-2 bg-footer uppercase font-serif tracking-wide">
+                  Register with QR
+                </div>
+                <Image src={REGISTER_QR_CODE} alt="qr-code" className=" mix-blend-screen w-72 h-72 lg:w-60 lg:h-60" />
               </div>
             </div>
           </div>
@@ -139,7 +152,7 @@ export default function Home() {
 
         {/* Sponsors and Contact Info */}
         <section className="relative w-full min-h-screen flex flex-col justify-between mb-20">
-          <div className="space-y-20 mt-20 max-container z-50">
+          <div className="space-y-20 mt-10 max-container z-50">
             <Culturals />
             <Sponsors />
             <Contact />

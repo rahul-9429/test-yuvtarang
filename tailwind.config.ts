@@ -14,6 +14,7 @@ export default {
         "primary-light": "var(--primary-light)",
         "primary": "var(--primary)",
         "border": "var(--border)",
+        "footer": "var(--footer)",
       },
       screens: {
         "2xl": { max: "1600px" },
