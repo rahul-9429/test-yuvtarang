@@ -17,7 +17,6 @@ const Culturals = () => {
                 <div id='events' className='flex flex-col items-center justify-center text-center scroll-m-10'>
                     <MagicButton title='Cultural Events' />
                     <p className='mt-3 max-w-[80rem] text-lg'>Experience a vibrant celebration of art, music, dance, and creativity at our college fest's cultural events!</p>
-                    <Link href={"/culturals"} className='text-sm font-bold text-center font-serif tracking-tight underline underline-offset-4 hover:text-border hover:text-blue-700'>Show More Details.</Link>
                 </div>
                 {/* <h1 className="text-4xl font-bold text-center mb-8">Cultural Events</h1> */}
                 <div className="flex lg:flex-col gap-6 mt-5">

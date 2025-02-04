@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Notification from "@/components/Elements/Notification"; // Assuming you've stored Notification as a component
+import Notification from "@/components/Elements/Notification";
 
 interface LostFoundItem {
   name: string;
@@ -15,7 +15,6 @@ interface ApiResponse {
   item: LostFoundItem;
 }
 
-
 const LostFoundPage = () => {
   const [formData, setFormData] = useState<LostFoundItem>({
     name: "",
@@ -28,14 +27,10 @@ const LostFoundPage = () => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Form field change handler
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -56,7 +51,7 @@ const LostFoundPage = () => {
           description: "",
           status: "lost",
         });
-        fetchItems(); // Refresh the list after submission
+        fetchItems();
       } else {
         setErrorMessage("Failed to report item.");
       }
@@ -67,16 +62,15 @@ const LostFoundPage = () => {
   };
 
   useEffect(() => {
-    fetchItems(); // Fetch items on component mount
+    fetchItems();
   }, []);
 
   const fetchItems = async () => {
     try {
       const response = await fetch("/api/lost-found");
       if (response.ok) {
-        const data: ApiResponse[] = await response.json(); // Explicitly define the response type
-        console.log("Fetched Items:", data);  // Check the structure of the fetched data
-        setItems(data);  // Set the items state
+        const data: ApiResponse[] = await response.json();
+        setItems(data);
       }
     } catch (error) {
       console.error("Error fetching items:", error);
@@ -84,10 +78,10 @@ const LostFoundPage = () => {
   };
 
   return (
-    <div className="mb-20 min-h-[calc(100vh-6.5rem)] w-full justify-items-center justify-self-center max-container">
+    <div className=" min-h-[calc(100vh-6.5rem)] p-6 rounded-lg mx-auto max-w-3xl">
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold">Lost & Found</h1>
-        <p className="text-sm">Fill out the form below to report a lost or found item. We hope this helps!</p>
+        <h1 className="text-3xl font-bold font-serif uppercase tracking-wider text-[--footer]">Lost & Found</h1>
+        <p className="text-sm text-gray-600">Fill out the form below to report a lost or found item. We hope this helps!</p>
       </div>
 
       {/* Notification display */}
@@ -100,17 +94,15 @@ const LostFoundPage = () => {
         )}
       </div>
 
-      <div className="">
-
-        {/* Lost & Found items list */}
-        <div className="mt-8 w-full">
-          <h2 className="text-xl font-bold">Currently Reported Lost & Found Items</h2>
+      {/* Items list */}
+      <div>
+        <div className="mt-8">
+          <h2 className="text-xl font-bold text-[--footer]">Currently Reported Lost & Found Items</h2>
           <ul className="space-y-4 mt-4">
             {items.length > 0 ? (
               items.map((data, index) => (
-                <li key={index} className="bg-background-tertiary p-4 rounded-md shadow-md">
-                  {/* Accessing item properties */}
-                  <h3 className="font-semibold text-lg">{data.item.item}</h3> {/* Accessing data.item.item */}
+                <li key={index} className="bg-[--primary-light] p-4 rounded-md shadow-md">
+                  <h3 className="font-semibold text-lg">{data.item.item}</h3>
                   <p><strong>Status:</strong> {data.item.status}</p>
                   <p><strong>Contact:</strong> {data.item.contact}</p>
                   <p><strong>Description:</strong> {data.item.description}</p>
@@ -123,7 +115,7 @@ const LostFoundPage = () => {
         </div>
 
         {/* Report Form */}
-        <form onSubmit={handleSubmit} className="bg-background-secondary border border-border w-full p-8 lg:p-4 rounded-md shadow-2xl space-y-4">
+        <form onSubmit={handleSubmit} className="bg-[--primary-light] border border-[--border] p-8 rounded-md shadow-lg mt-8">
           <div className="grid grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
@@ -134,7 +126,7 @@ const LostFoundPage = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 lg:p-2 placeholder:text-foreground-dim placeholder:lg:text-sm rounded bg-background-tertiary border border-border-bright focus:border-foreground focus:outline-none"
+                className="w-full p-3 rounded bg-[--primary] border border-[--border] focus:border-[--foreground] focus:outline-none"
               />
             </div>
             <div>
@@ -146,7 +138,7 @@ const LostFoundPage = () => {
                 value={formData.contact}
                 onChange={handleChange}
                 required
-                className="w-full p-3 lg:p-2 placeholder:text-foreground-dim placeholder:lg:text-sm rounded bg-background-tertiary border border-border-bright focus:border-foreground focus:outline-none"
+                className="w-full p-3 rounded bg-[--primary] border border-[--border] focus:border-[--foreground] focus:outline-none"
               />
             </div>
             <div>
@@ -158,7 +150,7 @@ const LostFoundPage = () => {
                 value={formData.item}
                 onChange={handleChange}
                 required
-                className="w-full p-3 lg:p-2 placeholder:text-foreground-dim placeholder:lg:text-sm rounded bg-background-tertiary border border-border-bright focus:border-foreground focus:outline-none"
+                className="w-full p-3 rounded bg-[--primary] border border-[--border] focus:border-[--foreground] focus:outline-none"
               />
             </div>
             <div>
@@ -169,7 +161,7 @@ const LostFoundPage = () => {
                 value={formData.status}
                 onChange={handleChange}
                 required
-                className="w-full p-3 lg:p-2 placeholder:text-foreground-dim placeholder:lg:text-sm rounded bg-background-tertiary border border-border-bright focus:border-foreground focus:outline-none"
+                className="w-full p-3 rounded bg-[--primary] border border-[--border] focus:border-[--foreground] focus:outline-none"
               >
                 <option value="lost">Lost</option>
                 <option value="found">Found</option>
@@ -185,14 +177,14 @@ const LostFoundPage = () => {
               value={formData.description}
               onChange={handleChange}
               required
-              className="w-full p-3 lg:p-2 placeholder:text-foreground-dim placeholder:lg:text-sm rounded bg-background-tertiary border border-border-bright focus:border-foreground focus:outline-none"
+              className="w-full p-3 rounded bg-[--primary] border border-[--border] focus:border-[--foreground] focus:outline-none"
             />
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center mt-6">
             <button
               type="submit"
-              className="mt-6 px-10 min-w-40 py-2 bg-foreground text-background rounded hover:bg-amongus-orange font-bold w-fit"
+              className="px-10 py-2 bg-[--primary] text-[--foreground] rounded hover:bg-[--primary-light] font-bold w-fit"
             >
               Submit
             </button>

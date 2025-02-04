@@ -43,7 +43,7 @@ const CountdownTimer = () => {
                 {Object.entries(timeLeft).map(([unit, value], index) => (
                     <motion.div
                         key={unit}
-                        className={`relative p-8 md:p-6 rounded-lg shadow-2xl bg-black/40 w-46 h-28 md:w-20 md:h-16  flex flex-col items-center justify-center backdrop-blur-xl text-center`}
+                        className={`relative p-8 2xl:p-6 rounded-lg shadow-2xl bg-footer w-52 h-28 2xl:w-20 2xl:h-16  flex flex-col items-center justify-center backdrop-blur-xl text-center`}
                     >
                         {/* Glowing Effect */}
                         <motion.div
@@ -53,12 +53,12 @@ const CountdownTimer = () => {
                         ></motion.div>
 
                         <motion.span
-                            className="block text-5xl md:text-2xl sm:text-3xl font-bold text-yellow-400 drop-shadow-xl font-serif"
+                            className="block text-5xl 2xl:text-2xl sm:text-3xl font-bold text-yellow-400 drop-shadow-xl font-serif"
                             key={value}
                         >
                             {value}
                         </motion.span>
-                        <p className="text-2xl md:text-xs text-primary-light uppercase font-serif tracking-widest mt-2">
+                        <p className="text-2xl 2xl:text-xs text-primary-light uppercase font-serif tracking-widest mt-2">
                             {unit}
                         </p>
                     </motion.div>

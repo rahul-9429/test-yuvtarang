@@ -5,13 +5,13 @@ import gsap from "gsap";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { ClasicalDancer, CricketPlayer, GuitarSinger, MusicGuitars, RangoliArt } from "@/components/Vectors/Icons";
+// import { ClasicalDancer, CricketPlayer, GuitarSinger, MusicGuitars, RangoliArt } from "@/components/Vectors/Icons";
 import Contact from "@/components/Event/Contact";
 import Sponsors from "@/components/Event/Sponsors";
 import Culturals from "@/components/Event/Culturals";
 import CountdownTimer from "@/components/Elements/CountdownTimer";
-import REGISTER_QR_CODE from "../../public/assets/images/yuvtarang-qr-code.png"
-
+// import REGISTER_QR_CODE from "../../public/assets/images/yuvtarang-qr-code.png"
+import COLLEGE_IMG from "../../public/assets/images/collage.png"
 // Image Imports
 import YUVTARANG_LOGO from "../../public/assets/images/yuvtarang-text.png";
 import SQUAREPATTERN from "../../public/assets/images/squarepattern.png";
@@ -66,8 +66,19 @@ export default function Home() {
         </div>
 
         {/* Main Section */}
-        <section ref={sectionRef} className="relative w-full min-h-[calc(100vh-8.5rem)] flex flex-col justify-between z-50">
-          <div className="relative max-container flex flex-col w-full">
+        <section ref={sectionRef} className="relative w-full min-h-[calc(100vh-8.5rem)] flex flex-col justify-between lg:justify-center z-50">
+          <Image
+            src={COLLEGE_IMG}
+            alt="yuvtarang-2025"
+            width={2000}
+            height={2000}
+            className="absolute top-0 w-full -z-[80] min-w-[40rem] md:min-w-0 opacity-80 h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-6.5rem)] object-cover object-top "
+            quality={75}
+            priority={true}
+          />
+          <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-[10rem] bg-primary opacity-90 h-[50rem] lg:h-[25rem] w-[50rem] lg:w-[25rem] rounded-full"></div>
+          
+          <div className="relative max-container flex flex-col w-full z-50">
             <div ref={(el) => setElementRef(el, 0)} className="w-full space-y-10 lg:space-y-5 mt-5 max-container z-50 justify-items-center">
               {/* Optimized Image */}
               <div>
@@ -81,14 +92,17 @@ export default function Home() {
                   priority={true}
                 />
               </div>
+              <p className='text-center text-xs text-footer uppercase font-serif hidden lg:block max-w-xl'>
+                "Yuvtarang" is an annual cultural 2-Day festival org by all the students belonging to all the institutions forming the Vignan Vizag group.
+              </p>
 
               <div ref={(el) => setElementRef(el, 1)}>
                 <CountdownTimer />
               </div>
 
               {/* Optimized Date Box */}
-              <div ref={(el) => setElementRef(el, 2)} className="flex items-center border-2 border-blue-800 w-96 lg:w-72 rounded text-xl lg:text-sm">
-                <div className="w-1/2 bg-gradient-to-b from-blue-600 to-blue-800 text-white px-4 py-2 font-serif">
+              <div ref={(el) => setElementRef(el, 2)} className="flex items-center border-2 border-blue-900 w-96 lg:w-72 rounded text-xl lg:text-sm bg-primary">
+                <div className="w-1/2 bg-gradient-to-b from-blue-700 to-blue-900 text-white px-4 py-2 font-serif">
                   <div>
                     21<sup>st</sup> — 22<sup>nd</sup>
                   </div>
@@ -110,35 +124,19 @@ export default function Home() {
                   </span>
                 </button>
               </Link>
-              {/* <div className="hidden lg:flex items-center justify-center my-4">
-                <div className="bg-footer p-1 rounded-lg">
-                  <div className="-mb-4 h-12 w-full text-primary text-center pt-2 bg-footer text-xs uppercase font-serif tracking-wide">
-                    Register with QR
-                  </div>
-                  <Image src={REGISTER_QR_CODE} alt="qr-code" className=" mix-blend-screen w-72 h-72 lg:w-60 lg:h-60" />
-                </div>
-              </div> */}
             </div>
-            {/* <div className="absolute flex flex-col top-6 right-[5%] 2xl:right-[1%] lg:top-10 items-center justify-center my-4 lg:hidden">
-              <div className="bg-footer p-1 rounded-lg">
-                <div className="-mb-4 h-14 w-full text-primary text-center pt-2 bg-footer uppercase font-serif tracking-wide">
-                  Register with QR
-                </div>
-                <Image src={REGISTER_QR_CODE} alt="qr-code" className=" mix-blend-screen w-72 h-72 lg:w-60 lg:h-60" />
-              </div>
-            </div> */}
           </div>
 
           {/* Animated Background Elements */}
-          <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-0 left-0 -z-[40] opacity-5 lg:hidden">
+          {/* <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-0 left-0 -z-[40] opacity-5 lg:hidden">
             <RangoliArt />
           </div>
           <div className="absolute transform translate-x-1/2 translate-y-1/2 bottom-0 right-0 -z-[40] opacity-5 lg:hidden">
             <RangoliArt />
-          </div>
+          </div> */}
 
           {/* Optimized Animated Figures */}
-          {[ClasicalDancer, CricketPlayer, GuitarSinger, MusicGuitars].map((Component, index) => (
+          {/* {[ClasicalDancer, CricketPlayer, GuitarSinger, MusicGuitars].map((Component, index) => (
             <div
               key={index}
               ref={(el) => setElementRef(el, 4 + index)}
@@ -147,7 +145,7 @@ export default function Home() {
             >
               <Component />
             </div>
-          ))}
+          ))} */}
         </section>
 
         {/* Sponsors and Contact Info */}

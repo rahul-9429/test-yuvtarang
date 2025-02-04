@@ -1,6 +1,8 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image';
-import VIGNAN_LOGO from "../../public/assets/svgs/vignan-logo.svg";
+import VIIT_LOGO from "../../public/assets/svgs/sponsors/viit.svg";
+import VIEW_LOGO from "../../public/assets/svgs/sponsors/view.svg";
+import VIPT_LOGO from "../../public/assets/svgs/sponsors/vipt.svg";
 import SKYLARK from "../../public/assets/images/sponsors/skylarkoe-logo.png";
 import AECC from "../../public/assets/images/sponsors/aecc-logo.jpg";
 import IDP from "../../public/assets/images/sponsors/idp-logo-.png";
@@ -63,8 +65,10 @@ const sponsors = () => {
         </div>
         <div className='w-fit'>
           <div className='font-semibold tracking-wide'>Event Partners</div>
-          <div className='w-full bg-background-seconday py-4 grid grid-cols-2 lg:grid-cols-2 xs:!grid-cols-2 gap-3'>
-            <SponsorCard src={VIGNAN_LOGO} alt={"Vignan's IIT"} />
+          <div className='w-full bg-background-seconday py-4 grid grid-cols-4 lg:grid-cols-2 xs:!grid-cols-2 gap-3'>
+            <SponsorCard src={VIIT_LOGO} alt={"Vignan's IIT"} />
+            <SponsorCard src={VIEW_LOGO} alt={"Vignan's IIT"} />
+            <SponsorCard src={VIPT_LOGO} alt={"Vignan's IIT"} />
             <div className='-mt-10'>
               <div className='font-semibold tracking-wide mb-4'>Community Partner</div>
               <SponsorCard src={SAC_LOGO} className={`h-[4rem]`} alt={"SAC"} />

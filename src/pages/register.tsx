@@ -75,22 +75,19 @@ const Register = () => {
                             {/* VIIT */}
                             <div className="bg-[--primary-light] p-4 rounded-lg shadow-md">
                                 <h3 className="text-lg font-semibold border-b border-[--border] pb-2">VIIT</h3>
-                                <ul className="list-disc ml-5 text-neutral-700 mt-2">
-                                    <li>Desk 1: Ground Floor, Dharithri Block, VIIT</li>
-                                    <li>Desk 2: G Foyer, Main Block, VIIT</li>
-                                </ul>
+                                <p className="text-neutral-700 mt-2">G Foyer, Main Block</p>
                             </div>
 
                             {/* VIEW */}
                             <div className="bg-[--primary-light] p-4 rounded-lg shadow-md">
                                 <h3 className="text-lg font-semibold border-b border-[--border] pb-2">VIEW</h3>
-                                <p className="text-neutral-700 mt-2">TBA</p>
+                                <p className="text-neutral-700 mt-2">Ground Floor Corridor, near the Staircase</p>
                             </div>
 
                             {/* VIPT */}
                             <div className="bg-[--primary-light] p-4 rounded-lg shadow-md">
                                 <h3 className="text-lg font-semibold border-b border-[--border] pb-2">VIPT</h3>
-                                <p className="text-neutral-700 mt-2">TBA</p>
+                                <p className="text-neutral-700 mt-2">S-11, 2nd Floor, Academic & Support Cells</p>
                             </div>
                         </div>
 

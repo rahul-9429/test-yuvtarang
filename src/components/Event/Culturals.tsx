@@ -21,7 +21,7 @@ const Culturals = () => {
                 {/* <h1 className="text-4xl font-bold text-center mb-8">Cultural Events</h1> */}
                 <div className="flex lg:flex-col gap-6 mt-5">
                     {/* Tab Content on the Left */}
-                    <div className="flex-1  rounded-lg border-2 border-[#C4B7A6] w-2/5 lg:w-full lg:min-h-60 overflow-clip group">
+                    <div className="flex-1  rounded-lg  w-2/5 lg:w-full lg:min-h-60 overflow-clip group">
                         <motion.div
                             key={activeIndex}
                             initial={{ x: direction === "right" ? "100%" : "-100%" }}

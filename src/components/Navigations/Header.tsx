@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import gsap from 'gsap'
 import { RangoliArt, RangoliArt1 } from '../Vectors/Icons'
+import VERTICAL_RULER from "../../../public/assets/svgs/vertical-ruler.svg"
 
 const TextScrambleHover = ({ text, className }: { text: string; className: string }) => {
   return <div className={`${className}`}>{text}</div>
@@ -24,31 +25,78 @@ const Header = () => {
 
   useEffect(() => {
     const handleEscKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setSidebarOpen(false);
+      if (e.key === "Escape") setSidebarOpen(false);
     };
 
     const toggleScroll = (disable: boolean) => {
       if (window.innerWidth <= 768) {
-        document.body.style.overflow = disable ? 'hidden' : '';
-        document.body.style.paddingRight = disable ? `${window.innerWidth - document.documentElement.clientWidth}px` : '';
+        document.body.style.overflow = disable ? "hidden" : "";
+        document.body.style.paddingRight = disable
+          ? `${window.innerWidth - document.documentElement.clientWidth}px`
+          : "";
       }
     };
 
+    const tl = gsap.timeline({ defaults: { ease: "power2.inOut", duration: 0.4 } });
+
     if (isSidebarOpen) {
-      gsap.to(backdropRef.current, { duration: 0.3, backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.15)" });
-      gsap.to(sidebarRef.current, { duration: 0.3, width: window.innerWidth <= 740 ? "30rem" : "80rem", ease: "power2.inOut" });
+      backdropRef.current?.classList.remove("hidden"); // Show backdrop immediately
+
+      tl.set(sidebarRef.current, { willChange: "transform, backdropFilter" }) // Improve rendering for animation
+        .to(
+          backdropRef.current,
+          {
+            backdropFilter: "blur(20px)",
+            backgroundColor: "rgba(255, 255, 255, 0.15)",
+            opacity: 1,
+          },
+          0
+        )
+        .to(
+          sidebarRef.current,
+          {
+            x: "0%",
+            width: window.innerWidth <= 740 ? "30rem" : "80rem",
+          },
+          0
+        );
       toggleScroll(true);
     } else {
-      gsap.to(backdropRef.current, { duration: 0.3, backdropFilter: "blur(0px)", backgroundColor: "rgba(255, 255, 255, 0)", onComplete: () => toggleScroll(false) });
-      gsap.to(sidebarRef.current, { duration: 0.3, width: "0rem", ease: "power2.inOut" });
+      tl.to(
+        sidebarRef.current,
+        {
+          x: "100%",
+          width: "0rem",
+        },
+        0
+      )
+        .to(
+          backdropRef.current,
+          {
+            backdropFilter: "blur(0px)",
+            backgroundColor: "rgba(255, 255, 255, 0)",
+            opacity: 0,
+          },
+          "-=0.3"
+        )
+        .set(sidebarRef.current, { willChange: "auto" });
+
+      // Delay hiding the backdrop by 400ms after animation
+      setTimeout(() => {
+        backdropRef.current?.classList.add("hidden");
+      }, 400);
+
+      toggleScroll(false);
     }
 
-    window.addEventListener('keydown', handleEscKey);
+    window.addEventListener("keydown", handleEscKey);
     return () => {
-      window.removeEventListener('keydown', handleEscKey);
+      window.removeEventListener("keydown", handleEscKey);
       toggleScroll(false);
     };
   }, [isSidebarOpen]);
+
+
 
   return (
     <>
@@ -83,7 +131,7 @@ const Header = () => {
       </div>
 
       {/* Sidebar & Backdrop */}
-      <div ref={backdropRef} className={`fixed top-0 right-0 w-full h-full z-[100] ${isSidebarOpen ? "block" : "hidden"}`} onClick={toggleSidebar} style={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(255, 255, 255, 0)" }} />
+      <div ref={backdropRef} className={`fixed top-0 right-0 w-full h-full z-[100]`} onClick={toggleSidebar} style={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(255, 255, 255, 0)" }} />
 
       <div ref={sidebarRef} className="fixed z-[100] top-0 right-0 h-screen lg:h-[100dvh] bg-primary overflow-hidden w-0">
         <button className="absolute z-[202] top-4 right-0 lg:right-3 w-fit p-4 hidden lg:block text-xs group" onClick={toggleSidebar}>
@@ -96,7 +144,7 @@ const Header = () => {
           <div className='col-start-1 col-end-2 lg:col-start-3 lg:col-end-4 p-6 lg:p-4 py-10 lg:pt-16 lg:hidden'>
             <li className='text-xs lg:text-[9px] uppercase font-medium font-serif list-[square] whitespace-nowrap w-10'>Discover</li>
           </div>
-          <div className='relative col-start-2 col-end-11 lg:col-start-3 lg:col-end-11 p-6 lg:p-4 py-8 lg:-mt-5 lg:pt-16 lg:ml-7 flex flex-col justify-between h-full'>
+          <div className='relative col-start-2 col-end-11 lg:col-start-3 lg:col-end-11 p-6 lg:p-4 py-8 mt-10 lg:-mt-5 lg:pt-16 lg:ml-7 flex flex-col justify-between h-full'>
             <div className='grid grid-cols-1 lg:grid-cols-1 gap-4 text-5xl lg:text-4xl text-border uppercase font-extrabold font-serif tracking-tight'>
               <Link href={`/`} onClick={toggleSidebar} className={`${router.pathname == "/" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-52 lg:w-40 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Home" className='' />
@@ -144,6 +192,9 @@ const Header = () => {
                 <path d="M0.34 12.28 L12.54 0.22" className='stroke-border group-hover:stroke-border group-hover:stroke-1 transition-all divide-neutral-400 ease-in-out' stroke-width="0.5"></path>
               </svg>
             </button>
+            <div className='h-full content-center -mt-8 lg:hidden'>
+              <Image className='w-8' src={VERTICAL_RULER} alt='vertical-ruler' />
+            </div>
           </div>
         </div>
 
