@@ -1,4 +1,5 @@
 import MagicButton from '@/components/Elements/MagicButton';
+import Head from 'next/head';
 import React from 'react';
 
 interface ContactProps {
@@ -22,11 +23,19 @@ const Contact = () => {
             people: [
                 { name: "Mrs. K. Sravanthi", role: "Assoc. DSA", org: "VIIT" },
                 { name: "Dr. K. P. Suhasini", role: "Assoc. DSA", org: "VIEW" },
-                { name: "Dr. S. Satyalakshmi", role: "Assoc. DSA", org: "VIIT" }
+                { name: "Dr. S. Satyalakshmi", role: "Assoc. DSA", org: "VIPT" }
             ]
         },
     ];
     const contacts: ContactProps[] = [
+        {
+            title: "Student Conveners",
+            people: [
+                { name: "E. Ratan Bhavish", org: "VIIT", contact: "7993726082" },
+                { name: "L. Gayatri", org: "VIEW", contact: "7569838603" },
+                { name: "K. Sai Kumar", org: "VIPT", contact: "6300193772" }
+            ]
+        },
         {
             title: "Cultural Coordinators",
             people: [
@@ -45,24 +54,19 @@ const Contact = () => {
                 { name: "J. Arpana", org: "VIPT", contact: "8383884187" }
             ]
         },
-        {
-            title: "Student Coordinators",
-            people: [
-                { name: "E. Ratan Bhavish", org: "VIIT", contact: "7993726082" },
-                { name: "L. Gayatri", org: "VIEW", contact: "7569838603" },
-                { name: "K. Sai Kumar", org: "VIPT", contact: "6300193772" }
-            ]
-        }
     ];
 
     return (
         <div className="min-h-screen">
-            <div className="justify-items-center">
+            <Head>
+                <title>Contact | Yuvtarang 2k25 | A National Level Youth Festival</title>
+            </Head>
+            <div id='contact' className="justify-items-center scroll-m-10">
                 <MagicButton title='Event Contacts' />
-                <div className='mt-3'>
-                    <div className='flex flex-wrap justify-center lg:justify-start gap-20 lg:gap-0'>
+                <div className='mt-10 justify-items-center lg:justify-items-start'>
+                    <div className='w-fit flex flex-wrap lg:grid lg:grid-cols-2 sm:!grid-cols-1 justify-center lg:justify-start gap-20 lg:gap-0'>
                         {mainContacts.map((section, index) => (
-                            <div key={index} className="p-3 mb-6">
+                            <div key={index} className="mb-6">
                                 <h2 className="text-xl font-semibold text-center lg:text-left font-serif uppercase pb-2">{section.title}</h2>
                                 <div className="mt-4 space-y-4">
                                     {section.people.map((person, idx) => (
@@ -82,9 +86,9 @@ const Contact = () => {
                         ))}
 
                     </div>
-                    <div className='flex flex-wrap justify-center lg:justify-start gap-20 lg:gap-0'>
+                    <div className='grid grid-cols-3 lg:grid-cols-2 sm:!grid-cols-1  justify-center lg:justify-start gap-20 lg:gap-0'>
                         {contacts.map((section, index) => (
-                            <div key={index} className="p-3 mb-6">
+                            <div key={index} className="mb-6">
                                 <h2 className="text-xl font-semibold text-center lg:text-left font-serif uppercase pb-2">{section.title}</h2>
                                 <div className="mt-4 space-y-4">
                                     {section.people.map((person, idx) => (

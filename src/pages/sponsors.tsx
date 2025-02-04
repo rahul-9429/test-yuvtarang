@@ -10,6 +10,7 @@ import INVICTA from "../../public/assets/images/sponsors/invicta-logo.jpg";
 import SAC_LOGO from "../../public/assets/images/sponsors/sac-logo.jpg";
 import MagicButton from '@/components/Elements/MagicButton';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const SponsorCard = ({ src, alt, className }: { src: string | StaticImageData; alt: string; className?: string }) => {
   return (
@@ -29,6 +30,10 @@ const SponsorCard = ({ src, alt, className }: { src: string | StaticImageData; a
 const sponsors = () => {
   return (
     <div className='min-h-screen max-w-7xl justify-self-center max-container'>
+      <Head>
+        <title>Sponsors | Yuvtarang 2k25 | A National Level Youth Festival</title>
+      </Head>
+
       <div id='sponsors' className='flex flex-col items-center justify-center text-center scroll-m-10'>
 
         <div className="space-y-3 mb-6">

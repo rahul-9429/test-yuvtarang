@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Notification from "@/components/Elements/Notification";
+import Head from "next/head";
 
 interface LostFoundItem {
   name: string;
@@ -79,6 +80,10 @@ const LostFoundPage = () => {
 
   return (
     <div className=" min-h-[calc(100vh-6.5rem)] p-6 rounded-lg mx-auto max-w-3xl">
+      <Head>
+        <title>Lost and Found | Yuvtarang 2k25 | A National Level Youth Festival</title>
+      </Head>
+
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold font-serif uppercase tracking-wider text-[--footer]">Lost & Found</h1>
         <p className="text-sm text-gray-600">Fill out the form below to report a lost or found item. We hope this helps!</p>

@@ -72,11 +72,11 @@ export default function Home() {
             alt="yuvtarang-2025"
             width={2000}
             height={2000}
-            className="absolute top-0 w-full -z-[80] min-w-[40rem] md:min-w-0 opacity-80 h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-6.5rem)] object-cover object-top "
+            className="absolute top-0 w-full -z-[80] min-w-[40rem] md:min-w-0 opacity-90  h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-6.5rem)] object-cover object-top "
             quality={75}
             priority={true}
           />
-          <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-[10rem] bg-primary opacity-90 h-[50rem] lg:h-[25rem] w-[50rem] lg:w-[25rem] rounded-full"></div>
+          <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-[15rem] lg:blur-[10rem] bg-primary opacity-90 h-[50rem] lg:h-[25rem] w-[50rem] lg:w-[25rem] rounded-full"></div>
           
           <div className="relative max-container flex flex-col w-full z-50">
             <div ref={(el) => setElementRef(el, 0)} className="w-full space-y-10 lg:space-y-5 mt-5 max-container z-50 justify-items-center">
@@ -87,12 +87,12 @@ export default function Home() {
                   alt="yuvtarang-2025"
                   width={2000}
                   height={2000}
-                  className="w-full min-w-[40rem] md:min-w-0"
+                  className="w-full min-w-[40rem] 2xl:min-w-[30rem] md:!min-w-0"
                   quality={75}
                   priority={true}
                 />
               </div>
-              <p className='text-center text-xs text-footer uppercase font-serif hidden lg:block max-w-xl'>
+              <p className='text-center text-sm text-footer uppercase font-sans hidden lg:block max-w-xl font-bold'>
                 "Yuvtarang" is an annual cultural 2-Day festival org by all the students belonging to all the institutions forming the Vignan Vizag group.
               </p>
 
@@ -150,7 +150,7 @@ export default function Home() {
 
         {/* Sponsors and Contact Info */}
         <section className="relative w-full min-h-screen flex flex-col justify-between mb-20">
-          <div className="space-y-20 mt-10 max-container z-50">
+          <div className="space-y-20 mt-10 lg:mt-20 max-container z-50">
             <Culturals />
             <Sponsors />
             <Contact />

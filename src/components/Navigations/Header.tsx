@@ -193,7 +193,7 @@ const Header = () => {
               </svg>
             </button>
             <div className='h-full content-center -mt-8 lg:hidden'>
-              <Image className='w-8' src={VERTICAL_RULER} alt='vertical-ruler' />
+              <Image className='w-6' src={VERTICAL_RULER} alt='vertical-ruler' />
             </div>
           </div>
         </div>

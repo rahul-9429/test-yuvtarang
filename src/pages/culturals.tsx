@@ -5,6 +5,7 @@ import Image from "next/image";
 import CULTURAL_SCHEDULE from "../../public/assets/images/cultural-schedule.jpeg"
 import { cultural_events as events } from "@/lib/event-details";
 import Link from "next/link";
+import Head from "next/head";
 
 
 const Culturals = () => {
@@ -13,6 +14,9 @@ const Culturals = () => {
 
     return (
         <div className="flex flex-col items-center max-container min-h-[calc(100vh-8.5rem)] text-[#3D2E2A]  ">
+            <Head>
+                <title>Cultural Events | Yuvtarang 2k25 | A National Level Youth Festival</title>
+            </Head>
             <div className="mx-auto max-w-7xl w-full">
                 <div id='events' className='flex flex-col items-center justify-center text-center scroll-m-10'>
                     <MagicButton title='Cultural Events' />
@@ -68,6 +72,16 @@ const Culturals = () => {
                             </button>
                         ))}
                     </div>
+                </div>
+                {/* Register Button */}
+                <div className="flex flex-col items-center justify-center md:mt-4 relative">
+                    <Link target="_blank" href="/register" className="mt-10 sm:mt-0">
+                        <button className="relative w-[180px] h-[40px] border-none rounded-[10px] bg-gradient-to-r from-[#77530a] via-[#ffd277] to-[#77530a] bg-[250%] text-[#ffd277] flex items-center justify-center cursor-pointer transition-all duration-200 overflow-hidden active:scale-95 hover:bg-right">
+                            <span className="absolute top-0.5 w-[97%] h-[90%] rounded-[8px] flex items-center justify-center bg-black bg-opacity-80 transition-all duration-1000 hover:bg-right">
+                                REGISTER NOW
+                            </span>
+                        </button>
+                    </Link>
                 </div>
                 <div className="my-10 border border-border rounded-md overflow-hidden">
                     <Image src={CULTURAL_SCHEDULE} alt="cultural-schedule" />

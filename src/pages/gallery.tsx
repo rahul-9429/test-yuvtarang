@@ -3,6 +3,7 @@ import path from 'path'
 import Image from 'next/image'
 import MagicButton from '@/components/Elements/MagicButton'
 import Link from 'next/link'
+import Head from 'next/head'
 
 interface GalleryProps {
     images: string[]
@@ -11,6 +12,10 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
     return (
         <div className="flex flex-col min-h-[calc(100vh-5.5rem)] max-container mb-20">
+            <Head>
+                <title>Gallery | Yuvtarang 2k25 | A National Level Youth Festival</title>
+            </Head>
+
             <div className="space-y-3 mb-6">
                 <Link href="/" className="hidden lg:flex items-center">
                     <button className="flex items-center p-3 py-2 border border-[--border] rounded-lg bg-[--primary] text-[--foreground] font-serif uppercase text-sm transition-all duration-200 ease-in-out hover:bg-[--primary-light] hover:text-[--footer] group">
