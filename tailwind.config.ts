@@ -15,6 +15,7 @@ export default {
         "primary": "var(--primary)",
         "border": "var(--border)",
         "footer": "var(--footer)",
+        "footer-secondary": "var(--footer-secondary)",
       },
       screens: {
         "2xl": { max: "1600px" },

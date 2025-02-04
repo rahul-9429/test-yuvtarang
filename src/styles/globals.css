@@ -9,6 +9,7 @@
   --primary: #FEDA8C;
   --border: #271400;
   --footer: #271d12;
+  --footer-secondary: #553919;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
     --primary: #FEDA8C;
     --border: #271400;
     --footer: #271d12;
+    --footer-secondary: #553919;
   }
   /* :root {
     --background: #0a0a0a;

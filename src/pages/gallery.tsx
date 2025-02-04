@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import Image from 'next/image'
 import MagicButton from '@/components/Elements/MagicButton'
+import Link from 'next/link'
 
 interface GalleryProps {
     images: string[]
@@ -9,10 +10,27 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
     return (
-        <div className="flex flex-col min-h-[calc(100vh-5.5rem)] max-container mt-3 mb-20">
-            <div className={`mb-6 text-center lg:text-left space-y-1 flex items-center justify-center`}>
-                <MagicButton title='Yuvtarang 2k24 Gallery' />
-                {/* <div className='text-sm'>Check out the exciting moments from the previous hackathon. Relive the creativity and innovation!</div> */}
+        <div className="flex flex-col min-h-[calc(100vh-5.5rem)] max-container mb-20">
+            <div className="space-y-3 mb-6">
+                <Link href="/" className="hidden lg:flex items-center">
+                    <button className="flex items-center p-3 py-2 border border-[--border] rounded-lg bg-[--primary] text-[--foreground] font-serif uppercase text-sm transition-all duration-200 ease-in-out hover:bg-[--primary-light] hover:text-[--footer] group">
+                        <svg
+                            className="w-5 h-5 group-hover:scale-110 transition-all duration-200 ease-in-out"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M19 12H5m7 7l-7-7 7-7"
+                            />
+                        </svg>
+                        <span className="sr-only">Back</span>
+                    </button>
+                </Link>
+                <div className="flex flex-col items-center justify-center">
+                    <MagicButton title='Yuvtarang 2k24 Gallery' />
+                    <div className='mt-3 max-w-[80rem] text-lg text-center'>Check out the vibrant moments from our previous cultural fest. Relive the energy, performances, and celebrations!</div>
+                </div>
             </div>
 
             <div className="columns-3 md:columns-1 gap-3 lg:gap-2 space-y-3 lg:space-y-2">

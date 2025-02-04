@@ -103,30 +103,30 @@ export default function Home() {
 
             {/* Register Button */}
             <div ref={(el) => setElementRef(el, 3)} className="flex flex-col items-center justify-center md:mt-4 relative">
-              <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdwfi7gvDeimrba1SEJmtF4CE38J-AWXjb3n__BR55outWoIw/formrestricted" className="mt-10 sm:mt-0">
+              <Link target="_blank" href="/register" className="mt-10 sm:mt-0">
                 <button className="relative w-[180px] h-[40px] border-none rounded-[10px] bg-gradient-to-r from-[#77530a] via-[#ffd277] to-[#77530a] bg-[250%] text-[#ffd277] flex items-center justify-center cursor-pointer transition-all duration-200 overflow-hidden active:scale-95 hover:bg-right">
                   <span className="absolute top-0.5 w-[97%] h-[90%] rounded-[8px] flex items-center justify-center bg-black bg-opacity-80 transition-all duration-1000 hover:bg-right">
                     REGISTER NOW
                   </span>
                 </button>
               </Link>
-              <div className="hidden lg:flex items-center justify-center my-4">
+              {/* <div className="hidden lg:flex items-center justify-center my-4">
                 <div className="bg-footer p-1 rounded-lg">
                   <div className="-mb-4 h-12 w-full text-primary text-center pt-2 bg-footer text-xs uppercase font-serif tracking-wide">
                     Register with QR
                   </div>
                   <Image src={REGISTER_QR_CODE} alt="qr-code" className=" mix-blend-screen w-72 h-72 lg:w-60 lg:h-60" />
                 </div>
-              </div>
+              </div> */}
             </div>
-            <div className="absolute flex flex-col top-6 right-[5%] 2xl:right-[1%] lg:top-10 items-center justify-center my-4 lg:hidden">
+            {/* <div className="absolute flex flex-col top-6 right-[5%] 2xl:right-[1%] lg:top-10 items-center justify-center my-4 lg:hidden">
               <div className="bg-footer p-1 rounded-lg">
                 <div className="-mb-4 h-14 w-full text-primary text-center pt-2 bg-footer uppercase font-serif tracking-wide">
                   Register with QR
                 </div>
                 <Image src={REGISTER_QR_CODE} alt="qr-code" className=" mix-blend-screen w-72 h-72 lg:w-60 lg:h-60" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Animated Background Elements */}
