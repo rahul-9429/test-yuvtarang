@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -53,8 +55,8 @@ const Notification: React.FC<NotificationProps> = ({ message, onDismiss }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className={`fixed bottom-10 right-10 md:top-7 max-w-96 h-fit md:right-3 transform -translate-x-1/2 -translate-y-1/2 px-6 py-4 border border-border-bright rounded-md shadow-lg uppercase font-sans 
-            ${isSuccess ? "bg-background-tertiary text-amongus-lime" : "bg-background-tertiary text-amongus-red"}`}
+          className={`fixed bottom-10 right-10 md:top-7 max-w-96 h-fit md:right-3 transform -translate-x-1/2 -translate-y-1/2 px-6 py-4 border border-primary rounded-md shadow-lg uppercase font-sans 
+            ${isSuccess ? "bg-footer text-primary" : "bg-footer text-red-600"}`}
           initial="hidden"
           animate="visible"
           exit="exit"

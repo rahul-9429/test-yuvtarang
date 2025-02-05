@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react'
-import LOGO from "../../../public/assets/images/yuvtarang-logo.png"
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import gsap from 'gsap'
-import { RangoliArt, RangoliArt1 } from '../Vectors/Icons'
-import VERTICAL_RULER from "../../../public/assets/svgs/vertical-ruler.svg"
+"use client";
+
+import gsap from 'gsap';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState, useRef } from 'react';
+import { RangoliArt, RangoliArt1 } from '../Vectors/Icons';
+import LOGO from "../../../public/assets/images/yuvtarang-logo.png";
+import VERTICAL_RULER from "../../../public/assets/svgs/vertical-ruler.svg";
 
 const TextScrambleHover = ({ text, className }: { text: string; className: string }) => {
   return <div className={`${className}`}>{text}</div>

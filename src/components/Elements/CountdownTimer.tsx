@@ -36,9 +36,6 @@ const CountdownTimer = () => {
 
     return (
         <div className="flex flex-col items-center justify-center  text-yellow-400 px-6 relative">
-            {/* Glowing Background Accent */}
-            {/* <div className="absolute w-96 h-96 bg-yellow-500 blur-3xl opacity-20 rounded-full -top-80 lg:top-0 left-1/2 transform -translate-x-1/2 -z-[40]"></div> */}
-            {/* Countdown Timer */}
             <div className="flex gap-6 lg:gap-2">
                 {Object.entries(timeLeft).map(([unit, value], index) => (
                     <motion.div

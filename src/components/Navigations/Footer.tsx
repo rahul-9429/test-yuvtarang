@@ -1,12 +1,8 @@
-import React from 'react';
-import YUVTARANG_LOGO from "../../../public/assets/images/yuvtarang-logo.png";
-import YUVTARANG_TEXT from "../../../public/assets/images/yuvtarang-text.png";
+import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { RangoliArt } from "@/components/Vectors/Icons";
-import SQUAREPATTERN from "../../../public/assets/images/squarepattern.png";
-import GAUTAMANKOJI from "../../../public/assets/images/team/gautamankoji.jpg"
-import Link from 'next/link';
+import YUVTARANG_TEXT from "../../../public/assets/images/yuvtarang-text.png";
+import GAUTAMANKOJI from "../../../public/assets/images/team/gautamankoji.jpg";
 
 const TextScrambleHover = ({ text, className }: { text: string; className: string }) => {
   return (
@@ -15,7 +11,6 @@ const TextScrambleHover = ({ text, className }: { text: string; className: strin
     </div>
   )
 }
-
 
 const Footer = () => {
   const router = useRouter();

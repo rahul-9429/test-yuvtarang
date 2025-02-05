@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MagicButton = ({title="Title"}: {title?: string}) => {
     return (
         <div className='relative w-fit text-white font-serif  uppercase text-lg'>

@@ -1,15 +1,16 @@
+"use client";
+
 import React from 'react'
 import Image, { StaticImageData } from 'next/image';
-import VIGNAN_LOGO from "../../../public/assets/svgs/vignan-logo.svg";
+import MagicButton from '@/components/Elements/MagicButton';
 import VIIT_LOGO from "../../../public/assets/svgs/sponsors/viit.svg";
 import VIEW_LOGO from "../../../public/assets/svgs/sponsors/view.svg";
 import VIPT_LOGO from "../../../public/assets/svgs/sponsors/vipt.svg";
-import SKYLARK from "../../../public/assets/images/sponsors/skylarkoe-logo.png";
-import AECC from "../../../public/assets/images/sponsors/aecc-logo.jpg";
 import IDP from "../../../public/assets/images/sponsors/idp-logo-.png";
-import INVICTA from "../../../public/assets/images/sponsors/invicta-logo.jpg";
+import AECC from "../../../public/assets/images/sponsors/aecc-logo.jpg";
 import SAC_LOGO from "../../../public/assets/images/sponsors/sac-logo.jpg";
-import MagicButton from '@/components/Elements/MagicButton';
+import INVICTA from "../../../public/assets/images/sponsors/invicta-logo.jpg";
+import SKYLARK from "../../../public/assets/images/sponsors/skylarkoe-logo.png";
 
 const SponsorCard = ({ src, alt, className }: { src: string | StaticImageData; alt: string; className?: string }) => {
     return (

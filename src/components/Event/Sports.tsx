@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import MagicButton from "@/components/Elements/MagicButton";
-import { cultural_events as events } from "@/lib/event-details";
+import { sports_events as events } from "@/lib/event-details";
 
-const Culturals = () => {
+const Sports = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [direction, setDirection] = useState("right");
     const contentRef = useRef(null);
@@ -26,11 +26,11 @@ const Culturals = () => {
         <div className="flex flex-col items-center text-[#3D2E2A]">
             <div className="mx-auto max-w-7xl w-full">
                 <div id='events' className='flex flex-col items-center justify-center text-center scroll-m-10'>
-                    <MagicButton title='Cultural Events' />
+                    <MagicButton title='Sports Events' />
                     <p className='mt-3 max-w-[80rem] text-lg'>
-                        Experience a vibrant celebration of art, music, dance, and creativity at our college fest's cultural events!
+                        Experience a vibrant celebration of art, music, dance, and creativity at our college fest's sport events!
                     </p>
-                    <Link href={"/culturals"} className='text-sm font-bold text-center font-serif tracking-tight underline underline-offset-4 hover:text-border hover:text-blue-700'>
+                    <Link href={"/sports"} className='text-sm font-bold text-center font-serif tracking-tight underline underline-offset-4 hover:text-border hover:text-blue-700'>
                         Show More Details.
                     </Link>
                 </div>
@@ -83,4 +83,4 @@ const Culturals = () => {
     );
 };
 
-export default Culturals;
+export default Sports;

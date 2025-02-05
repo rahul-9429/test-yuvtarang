@@ -11,14 +11,14 @@ export default function Document() {
 
         <meta property="og:title" content="Yuvtarang - Vignan Vizag Cultural Fest" />
         <meta property="og:description" content="Experience the energy of Yuvtarang, the biggest cultural fest at Vignan Vizag with music, dance, and entertainment." />
-        <meta property="og:image" content="https://yuvtarang.vercel.app/yuvtarang-banner.png" />
+        <meta property="og:image" content="https://yuvtarang.vercel.app/yuvtarang-banner.jpg" />
         <meta property="og:url" content="https://yuvtarang.vignaniit.edu.in/yuvtarang" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Yuvtarang - Vignan Vizag Cultural Fest" />
         <meta name="twitter:description" content="Join us at Yuvtarang, the ultimate 2-day cultural festival at Vignan Vizag, featuring amazing performances and fun activities!" />
-        <meta name="twitter:image" content="https://yuvtarang.vercel.app/yuvtarang-banner.png" />
+        <meta name="twitter:image" content="https://yuvtarang.vercel.app/yuvtarang-banner.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
 
@@ -42,7 +42,7 @@ export default function Document() {
                   "addressCountry": "IN"
                 }
               },
-              "image": ["https://yuvtarang.vercel.app/yuvtarang-banner.png"],
+              "image": ["https://yuvtarang.vercel.app/yuvtarang-banner.jpg"],
               "description": "Yuvtarang is a 2-day cultural festival at Vignan Vizag, packed with music, dance, and entertainment.",
               "organizer": {
                 "@type": "Organization",

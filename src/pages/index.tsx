@@ -15,6 +15,7 @@ import COLLEGE_IMG from "../../public/assets/images/collage.png"
 // Image Imports
 import YUVTARANG_LOGO from "../../public/assets/images/yuvtarang-text.png";
 import SQUAREPATTERN from "../../public/assets/images/squarepattern.png";
+import Sports from "@/components/Event/Sports";
 
 export default function Home() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -87,7 +88,7 @@ export default function Home() {
                   alt="yuvtarang-2025"
                   width={2000}
                   height={2000}
-                  className="w-full min-w-[40rem] 2xl:min-w-[30rem] md:!min-w-0"
+                  className="w-[40rem] 2xl:w-[30rem] md:w-full md:!min-w-0"
                   quality={75}
                   priority={true}
                 />
@@ -152,6 +153,7 @@ export default function Home() {
         <section className="relative w-full min-h-screen flex flex-col justify-between mb-20">
           <div className="space-y-20 mt-10 lg:mt-20 max-container z-50">
             <Culturals />
+            <Sports />
             <Sponsors />
             <Contact />
           </div>

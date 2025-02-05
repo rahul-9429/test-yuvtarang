@@ -1,10 +1,14 @@
 import MagicButton from '@/components/Elements/MagicButton';
+import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 
 const CodeOfConduct = () => {
     return (
         <div className="min-h-[calc(100vh-7.5rem)] max-container">
+            <Head>
+                <title>Code of Conduct | Yuvtarang | A National Level Youth Festival</title>
+            </Head>
             <div className="space-y-3 mb-6">
                 <Link href="/" className="hidden lg:flex items-center">
                     <button className="flex items-center p-3 py-2 border border-[--border] rounded-lg bg-[--primary] text-[--foreground] font-serif uppercase text-sm transition-all duration-200 ease-in-out hover:bg-[--primary-light] hover:text-[--footer] group">
