@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Yuvtarang - The annual 2-day cultural festival organized by Vignan Vizag, featuring music, dance, and vibrant student performances." />
-        <meta name="keywords" content="Yuvtarang, Vignan Vizag, cultural fest, college events, student festival, music, dance, fun activities" />
+        <meta name="keywords" content="Yuvtarang, Yuvtarang VIIT, Yuvtarang viit, Yuvtarang 2025, Vignan Vizag, cultural fest, college events, student festival, music, dance, fun activities" />
         <meta name="author" content="Vignan Vizag" />
 
         <meta property="og:title" content="Yuvtarang - Vignan Vizag Cultural Fest" />

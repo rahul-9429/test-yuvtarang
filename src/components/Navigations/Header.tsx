@@ -146,28 +146,28 @@ const Header = () => {
           </div>
           <div className='relative col-start-2 col-end-11 lg:col-start-3 lg:col-end-11 p-6 lg:p-4 py-8 mt-10 lg:-mt-5 lg:pt-16 lg:ml-7 flex flex-col justify-between h-full'>
             <div className='grid grid-cols-1 lg:grid-cols-1 gap-4 text-5xl lg:text-4xl text-border uppercase font-extrabold font-serif tracking-tight'>
-              <Link href={`/`} onClick={toggleSidebar} className={`${router.pathname == "/" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-52 lg:w-40 rounded bevel-normal-br`}>
+              <Link href={`/`} onClick={toggleSidebar} className={`${router.pathname == "/" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-52 lg:w-40 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Home" className='' />
               </Link>
-              <Link href={`/timeline`} onClick={toggleSidebar} className={`${router.pathname == "/timeline" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-72 lg:w-56 rounded bevel-normal-br`}>
+              <Link href={`/timeline`} onClick={toggleSidebar} className={`${router.pathname == "/timeline" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-72 lg:w-56 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Timeline" className='' />
               </Link>
-              {/* <Link href={`/prizes`} onClick={toggleSidebar} className={`${router.pathname == "/prizes" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-60 lg:w-44 rounded bevel-normal-br`}>
+              {/* <Link href={`/prizes`} onClick={toggleSidebar} className={`${router.pathname == "/prizes" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-60 lg:w-44 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Prizes" className='' />
               </Link> */}
-              <Link href={`/lost-found`} onClick={toggleSidebar} className={`${router.pathname == "/lost-found" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-[30rem] lg:w-[23rem] rounded bevel-normal-br`}>
+              <Link href={`/lost-found`} onClick={toggleSidebar} className={`${router.pathname == "/lost-found" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-[30rem] lg:w-[23rem] rounded bevel-normal-br`}>
                 <TextScrambleHover text="Lost and Found" className='' />
               </Link>
-              <Link href={`/sponsors`} onClick={toggleSidebar} className={`${router.pathname == "/sponsors" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-80 lg:w-60 rounded bevel-normal-br`}>
+              <Link href={`/sponsors`} onClick={toggleSidebar} className={`${router.pathname == "/sponsors" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-80 lg:w-60 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Sponsors" className='' />
               </Link>
-              <Link href={`/gallery`} onClick={toggleSidebar} className={`${router.pathname == "/gallery" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-72 lg:w-56 rounded bevel-normal-br`}>
+              <Link href={`/gallery`} onClick={toggleSidebar} className={`${router.pathname == "/gallery" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-72 lg:w-56 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Gallery" className='' />
               </Link>
-              <Link href={`/#about`} onClick={toggleSidebar} className={`${router.pathname == "/#about" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-52 lg:w-40 rounded bevel-normal-br`}>
+              <Link href={`/#about`} onClick={toggleSidebar} className={`${router.pathname == "/#about" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-52 lg:w-40 rounded bevel-normal-br`}>
                 <TextScrambleHover text="About" className='' />
               </Link>
-              <Link href={`/#faq`} onClick={toggleSidebar} className={`${router.pathname == "/#faq" ? "bg-amongus-cyan hover:!bg-amongus-cyan text-border " : "text-border"} hover:bg-primary-light hover:text-border p-1 px-2 w-36 lg:w-28 rounded bevel-normal-br`}>
+              <Link href={`/#faq`} onClick={toggleSidebar} className={`${router.pathname == "/#faq" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-36 lg:w-28 rounded bevel-normal-br`}>
                 <TextScrambleHover text="FAQ" className='' />
               </Link>
             </div>

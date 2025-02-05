@@ -43,7 +43,7 @@ const CountdownTimer = () => {
                 {Object.entries(timeLeft).map(([unit, value], index) => (
                     <motion.div
                         key={unit}
-                        className={`relative p-8 2xl:p-6 rounded-lg shadow-2xl bg-footer w-52 h-28 2xl:w-20 2xl:h-16 -space-y-px lg:-space-y-1 flex flex-col items-center justify-center backdrop-blur-xl text-center`}
+                        className={`relative p-8 2xl:p-6 rounded-lg shadow-2xl bg-footer w-52 h-28 2xl:w-20 2xl:h-16 lg:space-y-px flex flex-col items-center justify-center backdrop-blur-xl text-center`}
                     >
                         {/* Glowing Effect */}
                         <motion.div
