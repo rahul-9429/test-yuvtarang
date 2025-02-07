@@ -6,7 +6,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState, useRef } from 'react';
 import { RangoliArt, RangoliArt1 } from '../Vectors/Icons';
-import LOGO from "../../../public/assets/images/yuvtarang-logo.png";
+// import LOGO from "../../../public/assets/images/yuvtarang-logo.png";
+import LOGO from "../../../public/assets/images/yuvtarang-text.png";
+
 import VERTICAL_RULER from "../../../public/assets/svgs/vertical-ruler.svg";
 
 const TextScrambleHover = ({ text, className }: { text: string; className: string }) => {
@@ -102,22 +104,39 @@ const Header = () => {
 
   return (
     <>
-      <div className='h-28 lg:h-20 z-[200] w-full max-container lg:!p-0 scroll-smooth'>
-        <div className='h-28 lg:h-20 flex items-center justify-between'>
+      <div className='py-4 z-[200] w-full max-container lg:!p-0 scroll-smooth sticky top-0 bg-white/40 shadow-xl  backdrop-blur-lg border border-white/20 rounded-xl p-6'>
+        <div className=' flex items-center justify-between'>
           <Link href={"/"} className='w-fit flex items-center'>
-            <div className='w-fit'><Image src={LOGO} alt='yuvtarang-logo' className='w-60 lg:w-40 object-contain select-none' priority /></div>
+            <div className='w-fit'>
+              <Image src={LOGO} alt='yuvtarang-logo' className='w-28 object-contain select-none' priority /></div>
           </Link>
           <div className='flex items-center gap-10'>
-            <div className='flex items-center lg:hidden gap-10 font-serif text-lg uppercase'>
-              <Link href={"/"}>Home</Link>
-              <Link href={"/#events"}>Events</Link>
-              {/* <Link href={"/#sports"}>Sports</Link> */}
-              <Link href={"/#sponsors"}>Sponsors</Link>
-              <Link href={"/gallery"}>Gallery</Link>
-              <Link href={"/#contact"}>Contact</Link>
+            <div className='flex items-center lg:hidden gap-10  text-lg  font-bold'>
+              <Link 
+              className='hover:text-yellow-400 transition-all ease-in-out '
+              href={"/"}>Home</Link>
+              <Link 
+              className='hover:text-yellow-400 transition-all ease-in-out '
+              href={"/#events"}>Events</Link>
+              <Link 
+              className='hover:text-yellow-400 transition-all ease-in-out '
+              href={"/#faq"}>FAQ</Link>
+              <Link 
+              className='hover:text-yellow-400 transition-all ease-in-out '
+              href={"/#sponsors"}>Sponsors</Link>
+              <Link 
+              className='hover:text-yellow-400 transition-all ease-in-out '
+              href={"/gallery"}>Gallery</Link>
+              <Link 
+              className='hover:text-yellow-400 transition-all ease-in-out '
+              href={"/#contact"}>Contact</Link>
             </div>
+            {/* glow button  */}
+            <button
+             className='font-semibold rounded-3xl px-3 py-2 bg-yellow-500 drop-shadow-lg shadow-[0_0_20px_1px_rgba(255,0,150,0.7)] pulses'
+             >Register now!</button>
             <div className='lg:w-fit -mt-1'>
-              <button className='h-12 w-14 flex items-center justify-center group transition-all duration-100 ease-in-out'
+              <button className='h-10 w-14 flex items-center justify-center group transition-all duration-100 ease-in-out font-bold'
                 onClick={toggleSidebar}
               >
                 <div className='flex flex-col gap-[6.2px]'>
