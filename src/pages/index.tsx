@@ -179,13 +179,13 @@ export default function Home() {
 
         {/* Sponsors and Contact Info */}
         <section className="relative w-full min-h-screen flex flex-col justify-between mb-20">
-          <div className="space-y-20 mt-10 lg:mt-20 max-container z-50">
+          <div className="space-y-20 mt-10 lg:mt-20 max-container z-50 ">
             <About />
             <Cat_Events />
             <Sponsors />
             <Faq /> 
             
-            {/* <Contact /> */}
+            <Contact />
           </div>
         </section>
       </main>

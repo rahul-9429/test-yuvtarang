@@ -23,7 +23,7 @@ const Sports = () => {
     }, [activeIndex, direction]);
 
     return (
-        <div className="flex flex-col items-center text-[#3D2E2A]">
+        <div className="flex flex-col  items-center text-[#3D2E2A]">
             <div className="mx-auto max-w-7xl w-full">
                 <div id='events' className='flex flex-col items-center justify-center text-center scroll-m-10'>
                     <MagicButton title='Sports Events' />

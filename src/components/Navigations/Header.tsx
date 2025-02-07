@@ -19,8 +19,6 @@ const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
 
-
-
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
 
@@ -104,13 +102,13 @@ const Header = () => {
 
   return (
     <>
-      <div className='py-4 z-[200] w-full max-container lg:!p-0 scroll-smooth sticky top-0 bg-white/40 shadow-xl  backdrop-blur-lg border border-white/20 rounded-xl p-6'>
-        <div className=' flex items-center justify-between'>
+      <div className='py-4 z-[200] w-full max-container lg:!p-0 scroll-smooth sticky top-0 bg-[#553919]/70 shadow-xl  backdrop-blur-lg border border-white/20  p-6'>
+        <div className=' flex items-center justify-between pl-20'>
           <Link href={"/"} className='w-fit flex items-center'>
             <div className='w-fit'>
               <Image src={LOGO} alt='yuvtarang-logo' className='w-28 object-contain select-none' priority /></div>
           </Link>
-          <div className='flex items-center gap-10'>
+          <div className='flex items-center gap-4'>
             <div className='flex items-center lg:hidden gap-10  text-lg  font-bold'>
               <Link 
               className='hover:text-yellow-400 transition-all ease-in-out '
@@ -133,17 +131,18 @@ const Header = () => {
             </div>
             {/* glow button  */}
             <button
-             className='font-semibold rounded-3xl px-3 py-2 bg-yellow-500 drop-shadow-lg shadow-[0_0_20px_1px_rgba(255,0,150,0.7)] pulses'
+             className='font-bold rounded-3xl ml-2 px-3 py-2 bg-amber-200 drop-shadow-lg shadow-[0_0_20px_1px_#553919] pulses'
              >Register now!</button>
             <div className='lg:w-fit -mt-1'>
               <button className='h-10 w-14 flex items-center justify-center group transition-all duration-100 ease-in-out font-bold'
                 onClick={toggleSidebar}
               >
-                <div className='flex flex-col gap-[6.2px]'>
-                  <div className='bg-neutral-600 w-8 h-0.5 rounded-full'></div>
-                  <div className='bg-neutral-600 w-8 h-0.5 rounded-full'></div>
-                  <div className='bg-neutral-600 w-8 h-0.5 rounded-full'></div>
-                </div>
+               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="4" y1="6" x2="20" y2="6" />
+  <line x1="4" y1="12" x2="20" y2="12" />
+  <line x1="4" y1="18" x2="20" y2="18" />
+</svg>
+
                 <span className='sr-only'>Menu</span>
               </button>
             </div>
@@ -154,7 +153,7 @@ const Header = () => {
       {/* Sidebar & Backdrop */}
       <div ref={backdropRef} className={`fixed top-0 right-0 w-full h-full z-[100]`} onClick={toggleSidebar} style={{ backdropFilter: "blur(0px)", backgroundColor: "rgba(255, 255, 255, 0)" }} />
 
-      <div ref={sidebarRef} className="fixed z-[100] top-0 right-0 h-screen lg:h-[100dvh] bg-primary overflow-hidden w-0">
+      <div ref={sidebarRef} className="fixed z-[300] top-0 right-0 h-screen lg:h-[100dvh] bg-primary overflow-hidden w-0">
         <button className="absolute z-[202] top-4 right-0 lg:right-3 w-fit p-4 hidden lg:block text-xs group" onClick={toggleSidebar}>
           <svg xmlns="http://www.w3.org/2000/svg" className='hover:stroke-2' viewBox="0 0 12.82 12.28" width="18" height="18">
             <path d="M0.34 0.22 L12.54 12.28" className='stroke-border stroke-1' stroke-width="0.5"></path>

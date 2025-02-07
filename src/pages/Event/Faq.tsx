@@ -10,15 +10,15 @@ const Faq = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <section id="faq" className="flex flex-col justify-center items-center py-10 bg-pink-500">
+    <section id="faq" className="flex flex-col justify-center items-center py-10 bg-[#B88A44]/60">
     <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
   
-    <div className="w-screen flex flex-col justify-center items-center">
+    <div className="w-screen flex flex-col justify-center text-white items-center">
       <div className="flex flex-col space-y-4 w-[50%]">
         {faqs.map((faq, index) => (
-          <div key={index} className="border rounded-lg tracking-wide bg-gray-100 p-2 shadow-md">
+          <div key={index} className="border rounded-lg tracking-wide bg-[#553919]/80 p-2 shadow-md">
             <button
-              className="w-full text-left  font-bold flex justify-between items-center p-2"
+              className="w-full text-left outline-none border-none  font-bold flex justify-between items-center p-2"
               onClick={() => toggleFAQ(index)}
             >
               {faq.question}
@@ -59,7 +59,7 @@ const Faq = () => {
 </span>
 
             </button>
-            {openIndex === index && <p className="mt-2 p-2 text-medium font-semibold text-gray-800">{faq.ans}</p>}
+            {openIndex === index && <p className="mt-2 p-2 text-medium font-semibold text-white">{faq.ans}</p>}
           </div>
         ))}
       </div>
