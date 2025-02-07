@@ -11,12 +11,12 @@ const Cat_Events = () => {
         Description="Immerse yourself in a world of artistic expression, mesmerizing performances, and creative brilliance at our cultural extravaganza! From soulful music to electrifying dance, experience the magic of talent and passion coming to life!" 
         Name="Culturals"
         url="/culturals"
-        Img_url="https://raw.githubusercontent.com/rahul-9429/yuvtarang-2025/blob/master/public/assets/images/Dance_cover.jpg"
+        Img_url="https://raw.githubusercontent.com/rahul-9429/test-yuvtarang/blob/master/public/assets/images/Dance_cover.jpg"
         />
         <CatEveComp Description="Unleash your competitive spirit and showcase your athletic prowess at our thrilling sports events! From intense matches to exhilarating victories, get ready to experience the ultimate battle of skill, strategy, and sportsmanship!"  
         Name="Sports"
         url="/sports"
-        Img_url="https://raw.githubusercontent.com/rahul-9429/yuvtarang-2025/blob/master/public/assets/images/kabaddi.JPG"
+        Img_url="https://raw.githubusercontent.com/rahul-9429/test-yuvtarang/blob/main/public/assets/images/kabaddi.JPG"
 
         />
     </div>
