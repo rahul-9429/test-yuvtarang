@@ -18,7 +18,8 @@ export const sports_events = [
     { title: "Volleyball (Men)", description: "A high-energy game of spikes and blocks, where skill meets strategy.", imgurl: "" },
     { title: "Basketball (Men)", description: "Fast-paced action, with teams battling for supremacy on the court.", imgurl: "" },
     { title: "Football (Men)", description: "A thrilling contest of speed and precision as teams aim for victory.", imgurl: "" },
-    { title: "Kho-Kho (Men & Women)", description: "A dynamic and swift game of tag, requiring agility and quick reflexes.", imgurl: "" },
+    { title: "Kho-Kho (Men)", description: "A dynamic and swift game of tag, requiring agility and quick reflexes.", imgurl: "" },
+    { title: "Kho-Kho (Women)", description: "A dynamic and swift game of tag, requiring agility and quick reflexes.", imgurl: "" },
     { title: "Throwball (Women)", description: "A team sport that combines elements of volleyball and handball for an exciting challenge.", imgurl: "" },
     { title: "Cricket", description: "A beloved sport that blends strategy, skill, and teamwork in an epic showdown.", imgurl: "" },
 ];

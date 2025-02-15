@@ -43,11 +43,11 @@ const CodeOfConduct = () => {
 
                 <div className="mt-6">
                     <h2 className="text-2xl font-semibold mb-3">Important Information</h2>
-                    <p>
+                    <p className=''>
                         <strong>Event Date:</strong> 21st - 22nd February 2025 <br />
                         <strong>Venue:</strong> Vignan's Institute of Information Technology, Visakhapatnam <br />
                         <strong>Emergency Contact:</strong> <Link href={`/#contact`} className='font-serif underline underline-offset-2 font-medium hover:text-footer-secondary'>contact details.</Link> <br />
-                        <strong>Social Media:</strong> Follow us on [Insert Social Media Links] for updates!
+                        <strong>Social Media:</strong> Follow us on <a href="" className=''>instagram</a>  for updates!
                     </p>
                 </div>
             </div>

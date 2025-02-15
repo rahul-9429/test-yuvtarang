@@ -33,8 +33,10 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                     </button>
                 </Link>
                 <div className="flex flex-col items-center justify-center">
-                    <MagicButton title='Yuvtarang 2k24 Gallery' />
-                    <div className='mt-3 max-w-[80rem] text-lg text-center'>Check out the vibrant moments from our previous cultural fest. Relive the energy, performances, and celebrations!</div>
+                    {/* <MagicButton title='Yuvtarang 2k24 Gallery' /> */}
+                    <h2 className="text-4xl sm:text-10xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#77530a] to-yellow-800">Yuvtarang 2k24 Gallery</h2>
+
+                    <div className='mt-3 max-w-[80rem] text-lg font-semibold text-center'>Check out the vibrant moments from our previous cultural fest. Relive the energy, performances, and celebrations!</div>
                 </div>
             </div>
 

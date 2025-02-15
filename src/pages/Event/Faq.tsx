@@ -13,10 +13,10 @@ const Faq = () => {
     <section id="faq" className="flex flex-col justify-center items-center py-10 bg-[#B88A44]/60">
     <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
   
-    <div className="w-screen flex flex-col justify-center text-white items-center">
-      <div className="flex flex-col space-y-4 w-[50%]">
+    <div className="w-screen flex flex-col justify-center text-white transition-transform items-center">
+      <div className="flex flex-col space-y-4 w-[50%] sm:w-[80%]">
         {faqs.map((faq, index) => (
-          <div key={index} className="border rounded-lg tracking-wide bg-[#553919]/80 p-2 shadow-md">
+          <div key={index} className="border rounded-lg tracking-wide bg-[#553919]/80 p-2 shadow-md ">
             <button
               className="w-full text-left outline-none border-none  font-bold flex justify-between items-center p-2"
               onClick={() => toggleFAQ(index)}
@@ -24,7 +24,6 @@ const Faq = () => {
               {faq.question}
               <span>
   {openIndex === index ? (
-    // Arrow Up
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="w-5 h-5"
@@ -40,7 +39,6 @@ const Faq = () => {
       ></path>
     </svg>
   ) : (
-    // Arrow Down
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="w-5 h-5"
@@ -59,13 +57,13 @@ const Faq = () => {
 </span>
 
             </button>
-            {openIndex === index && <p className="mt-2 p-2 text-medium font-semibold text-white">{faq.ans}</p>}
+            {openIndex === index && <p className="mt-2 p-2 text-medium font-semibold  text-white">{faq.ans}</p>}
           </div>
         ))}
       </div>
     </div>
 
-    <span className='pt-8 font-semibold underline'>
+    <span className='pt-8 text-lg font-semibold underline'>
         <Link  href={'/coc'}>  Code Of Conduct</Link>
        </span>
   </section>

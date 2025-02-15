@@ -18,9 +18,10 @@ const Culturals = () => {
                 <title>Cultural Events | Yuvtarang 2k25 | A National Level Youth Festival</title>
             </Head>
             <div className="mx-auto max-w-7xl w-full">
-                <div id='events' className='flex flex-col items-center justify-center text-center scroll-m-10'>
-                    <MagicButton title='Cultural Events' />
-                    <p className='mt-3 max-w-[80rem] text-lg'>Experience a vibrant celebration of art, music, dance, and creativity at our college fest's cultural events!</p>
+                <div id='events' className='flex flex-col items-center justify-center text-center scroll-m-10 mt-8'>
+                    
+                    <h2 className="text-4xl sm:text-10xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#77530a] to-yellow-800">Culturals Events</h2>
+                    <p className='mt-3 max-w-[80rem] text-lg font-semibold '>Experience a vibrant celebration of art, music, dance, and creativity at our college fest's cultural events!</p>
                 </div>
                 {/* <h1 className="text-4xl font-bold text-center mb-8">Cultural Events</h1> */}
                 <div className="flex lg:flex-col gap-6 mt-5">
@@ -76,11 +77,7 @@ const Culturals = () => {
                 {/* Register Button */}
                 <div className="flex flex-col items-center justify-center md:mt-4 relative">
                     <Link target="_blank" href="/register" className="mt-10 sm:mt-0">
-                        <button className="relative w-[180px] h-[40px] border-none rounded-[10px] bg-gradient-to-r from-[#77530a] via-[#ffd277] to-[#77530a] bg-[250%] text-[#ffd277] flex items-center justify-center cursor-pointer transition-all duration-200 overflow-hidden active:scale-95 hover:bg-right">
-                            <span className="absolute top-0.5 w-[97%] h-[90%] rounded-[8px] flex items-center justify-center bg-black bg-opacity-80 transition-all duration-1000 hover:bg-right">
-                                REGISTER NOW
-                            </span>
-                        </button>
+                        <MagicButton title="Register Now!" />
                     </Link>
                 </div>
                 <div className="my-10 border border-border rounded-md overflow-hidden">

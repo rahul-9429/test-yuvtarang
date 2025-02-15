@@ -7,14 +7,14 @@ interface Props {
 
 import React from 'react'
 import Image from 'next/image'
-import Caltural from '../../public/assets/images/collage.png'
-import CoverImg from '../../public/assets/images/Dance_cover.jpg'
 // import CoverImg2 from '../../public/assets/images/kabaddi.JPG'
 import Link from 'next/link';
 import MagicButton from './Elements/MagicButton';
 const CatEveComp : React.FC<Props> = ({ Description, Name, url,Img_url })  => {
   return (
-    <div className="relative  rounded-lg bg-white w-[30%] min-h-[600px] flex flex-col items-center justify-center overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out">
+    
+    <div className="relative  rounded-lg bg-white w-[30%] sm:w-[90%] min-h-[600px] flex flex-col items-center justify-center overflow-hidden hover:scale-105 transition-all duration-300 ease-in-out shadow-[0px_0px_30px_1px_black]">
+  <Link href={`${url}`} className='z-[100] !h-full'>
       
   {/* Background Image */}
   <Image 
@@ -24,25 +24,24 @@ const CatEveComp : React.FC<Props> = ({ Description, Name, url,Img_url })  => {
     layout="fill"
   />
 
-  <div className="relative z-10 p-6 text-white flex flex-col h-full justify-between">
+  <div className="relative z-10 p-6 text-white flex flex-col !h-full justify-between">
   {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-tr from-yellow-300 via-transparent to-transparent"></div>
-  <div className="absolute inset-0 bg-gradient-to-b from-yellow-100 via-transparent to-transparent"></div>
+  <div className="absolute inset-0 bg-gradient-to-tr from-yellow-700/90 via-transparent to-transparent"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-yellow-700/60 via-transparent to-transparent"></div>
 
   {/* Content */}
   <span className="gap-4 relative">
     <h1 className='text-3xl font-bold'>{Name}</h1>
-    <p className='line-clamp-3'>
+    <p className='line-clamp-2 pt-3'>
    {Description}
     </p>
   </span>
-  <Link href={`${url}`} className='z-[900]'>
  <MagicButton title='Compete' /> 
-  </Link>
+ 
 </div>
+</Link>
 
 </div>
-
   )
 }
 

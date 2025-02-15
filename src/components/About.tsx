@@ -8,7 +8,7 @@ const About = () => {
     {/* <div>
     <CricketPlayer/>
     </div> */}
-    <div className=" lg:text-left w-1/2 mx-10">
+    <div className=" lg:text-left w-1/2 sm:w-full mx-10">
                         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-white">About Yuvtarang </h2>
                         <p className="text-lg md:text-xl text-white mb-8 leading-relaxed text-justify transform hover:scale-[1.02] transition-transform duration-300">
                         Welcome to Yuvtarang - VIGNAN's IIT Annual Fest!
@@ -31,7 +31,7 @@ Step into an otherworldly experience where culture, music, art, food, and sports
                             </div>
                         </div>
     </div>
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center items-center sm:hidden'>
     <ClasicalDancer/>
     <ClasicalDancer/>
 

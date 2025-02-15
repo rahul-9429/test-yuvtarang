@@ -63,7 +63,7 @@ export default function Home() {
           <div className="flex items-center justify-center w-full -mx-3 h-6 select-none">
             {[...Array(320)].map((_, index) => (
               <div key={index} className="flex-none p-px">
-                {/* <Image src={SQUAREPATTERN} alt={`square-${index}`} width={100} height={100} className="w-5" /> */}
+                <Image src={SQUAREPATTERN} alt={`square-${index}`} width={100} height={100} className="w-5" />
               </div>
             ))}
           </div>
@@ -71,15 +71,16 @@ export default function Home() {
 
         {/* Main Section */}
         <section ref={sectionRef} className="relative w-full min-h-[calc(100vh-8.5rem)] flex flex-col justify-between lg:justify-center z-50">
-          {/* <Image
+          <Image
             src={COLLEGE_IMG}
             alt="yuvtarang-2025"
             width={2000}
             height={2000}
-            className="absolute top-0 w-full -z-[80] min-w-[40rem] md:min-w-0 opacity-90  h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-6.5rem)] object-cover object-top "
+            className="blur-sm absolute top-0 w-full -z-[80] min-w-[40rem] md:min-w-0 opacity-90  h-[calc(100vh-8.5rem)] lg:h-[calc(100vh-6.5rem)] object-cover object-top "
             quality={75}
             priority={true}
-          /> */}
+          />
+          
           <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-[15rem] lg:blur-[10rem] bg-primary opacity-90 h-[50rem] lg:h-[25rem] w-[50rem] lg:w-[25rem] rounded-full"></div>
           
           <div className="relative max-container flex flex-col w-full z-50 ">
@@ -90,7 +91,7 @@ export default function Home() {
                   src={YUVTARANG_LOGO}
                   alt="yuvtarang-2025"
                   width={2000}
-                  height={2000}
+                  height={2200}
                   className="w-[40rem] 2xl:w-[30rem] md:w-full md:!min-w-0"
                   quality={75}
                   priority={true}
@@ -117,8 +118,11 @@ export default function Home() {
                   </div>
                 </div>
               </div> */}
-                <div className="flex font-bold text-2xl">
-                February 21st & 22nd, 2025
+                <div className="flex font-bold text-3xl font-serif">
+                  <div>
+                February 21 <sup>st</sup>  & 22<sup>nd  </sup>, 2025
+                    
+                  </div>
 
                 </div>
             </div>
@@ -127,11 +131,16 @@ export default function Home() {
 
 <div className="space-x-4">
                         
-                        <a href="" className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_0_15px_0_0_20px_yellow] hover:shadow-[0_0_20px_yellow] transition-all duration-300 inline-block hover:-translate-y-1 animate-pulse ml-2">
+                        <a href="/register"
+                        style={{
+                          textShadow: "5px 5px 25px rgba(234, 179, 8, 0.7)",
+                          // color: "#F59E0B", // Matches Tailwind's yellow-500
+                        }}
+                        className="bg-footer   text-white font-bold py-4 px-8 rounded-full text-lg shadow-[0_0_15px_0_0_20px_footer] hover:shadow-[0_0_20px_footer] transition-all duration-300 inline-block hover:-translate-y-1  ml-2">
                             Register Now!
                         </a>
                         
-                        <a href="#about" className="bg-transparent border-2 border-yellow-500 text-yellow-300 hover:bg-yellow-500/10 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 inline-block hover:-translate-y-1 md:mt-0 mt-2">
+                        <a href="#about" className="bg-transparent border-2 border-footer text-footer hover:bg-footer-[.5] hover:text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 inline-block hover:-translate-y-1 md:mt-0 mt-2">
                             About Yuvtarang
                         </a>
                     </div>
@@ -174,20 +183,20 @@ export default function Home() {
             >
               <Component />
             </div>
-          ))} */}
+          ))} */} 
         </section>
 
         {/* Sponsors and Contact Info */}
-        <section className="relative w-full min-h-screen flex flex-col justify-between mb-20">
+        {/* <section className="relative w-full min-h-screen flex flex-col justify-between mb-20">
           <div className="space-y-20 mt-10 lg:mt-20 max-container z-50 ">
-            <About />
+           
+          </div>
+        </section> */}
+        <About />
             <Cat_Events />
             <Sponsors />
             <Faq /> 
-            
             <Contact />
-          </div>
-        </section>
       </main>
     </div>
   );

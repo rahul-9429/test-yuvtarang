@@ -28,14 +28,16 @@ const SponsorCard = ({ src, alt, className }: { src: string | StaticImageData; a
 
 const Sponsors = () => {
     return (
-        <div className='max-w-7xl mx-auto justify-items-center'>
+        <div className='max-w-7xl mx-auto justify-items-center w-[90%]'>
             <div id='sponsors' className='flex flex-col items-center justify-center text-center scroll-m-10'>
-                <MagicButton title='Event Sponsors' />
-                <p className='mt-3 max-w-[80rem] text-lg'>Our mission wouldn't be possible without the support of our amazing sponsors! <span className='inline-block lg:hidden'>They're the true crewmates behind the scenes, fueling this hackathon with resources and opportunities.</span> A big thank you to them for helping us reach new heights!</p>
+         <h2 className="text-4xl sm:text-10xl font-bold mb-2 bg-clip-text text-[#3D2E2A] ">Our Sponsors</h2>
+                
+                {/* <MagicButton title='Event Sponsors' /> */}
+                <p className='mt-3 max-w-[80rem] text-xl font-semibold'>Our mission wouldn't be possible without the support of our amazing sponsors! <span className='inline-block lg:hidden'>They're the true crewmates behind the scenes, fueling this hackathon with resources and opportunities.</span> A big thank you to them for helping us reach new heights!</p>
             </div>
             <div className="relative flex flex-wrap gap-2 items-center justify-center w-full">
                 <div className='w-fit'>
-                    <div className='font-semibold tracking-wide'>Sponsors</div>
+                    <div className='font-semibold tracking-wide text-lg'>Sponsors</div>
                     <div className='w-full bg-background-seconday py-4 grid grid-cols-4 lg:grid-cols-2 xs:!grid-cols-2 gap-3'>
                         <SponsorCard src={SKYLARK} alt={"Skylark"} />
                         <SponsorCard src={AECC} alt={"AECC"} />
@@ -44,13 +46,13 @@ const Sponsors = () => {
                     </div>
                 </div>
                 <div className='w-fit'>
-                    <div className='font-semibold tracking-wide'>Event Partners</div>
+                    <div className='font-semibold tracking-wide text-lg'>Event Partners</div>
                     <div className='w-full bg-background-seconday py-4 grid grid-cols-4 lg:grid-cols-2 xs:!grid-cols-2 gap-3'>
                         <SponsorCard src={VIIT_LOGO} alt={"Vignan's IIT"} />
                         <SponsorCard src={VIEW_LOGO} alt={"Vignan's IIT"} />
                         <SponsorCard src={VIPT_LOGO} alt={"Vignan's IIT"} />
                         <div className='-mt-10'>
-                            <div className='font-semibold tracking-wide mb-4'>Community Partner</div>
+                            <div className='font-semibold tracking-wide mb-4 text-lg'>Community Partner</div>
                             <SponsorCard src={SAC_LOGO} className={`h-[4rem]`} alt={"SAC"} />
                         </div>
                     </div>

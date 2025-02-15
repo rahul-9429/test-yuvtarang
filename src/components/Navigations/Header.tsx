@@ -102,8 +102,8 @@ const Header = () => {
 
   return (
     <>
-      <div className='py-4 z-[200] w-full max-container lg:!p-0 scroll-smooth sticky top-0 bg-[#553919]/70 shadow-xl  backdrop-blur-lg border border-white/20  p-6'>
-        <div className=' flex items-center justify-between pl-20'>
+      <div className='py-4 z-[200] w-full max-container lg:!p-0 scroll-smooth sticky top-0 shadow-xl  backdrop-blur-lg border border-white/20  p-6'>
+        <div className=' flex items-center justify-between pl-20 sm:pl-4'>
           <Link href={"/"} className='w-fit flex items-center'>
             <div className='w-fit'>
               <Image src={LOGO} alt='yuvtarang-logo' className='w-28 object-contain select-none' priority /></div>
@@ -131,6 +131,7 @@ const Header = () => {
             </div>
             {/* glow button  */}
             <button
+              onClick={() => router.push('/register')}
              className='font-bold rounded-3xl ml-2 px-3 py-2 bg-amber-200 drop-shadow-lg shadow-[0_0_20px_1px_#553919] pulses'
              >Register now!</button>
             <div className='lg:w-fit -mt-1'>
@@ -162,10 +163,10 @@ const Header = () => {
         </button>
         <div className="grid grid-cols-12 sm:w-[26rem] h-screen">
           <div className='col-start-1 col-end-2 lg:col-start-3 lg:col-end-4 p-6 lg:p-4 py-10 lg:pt-16 lg:hidden'>
-            <li className='text-xs lg:text-[9px] uppercase font-medium font-serif list-[square] whitespace-nowrap w-10'>Discover</li>
+            <li className='text-sm lg:text-[9px] uppercase font-bold  list-[none] whitespace-nowrap w-10'>Discover</li>
           </div>
           <div className='relative col-start-2 col-end-11 lg:col-start-3 lg:col-end-11 p-6 lg:p-4 py-8 mt-10 lg:-mt-5 lg:pt-16 lg:ml-7 flex flex-col justify-between h-full'>
-            <div className='grid grid-cols-1 lg:grid-cols-1 gap-4 text-5xl lg:text-4xl text-border uppercase font-extrabold font-serif tracking-tight'>
+            <div className='grid grid-cols-1 lg:grid-cols-1 gap-4 text-5xl lg:text-4xl text-border uppercase font-bold  tracking-tight'>
               <Link href={`/`} onClick={toggleSidebar} className={`${router.pathname == "/" ? "bg-footer-secondary hover:!bg-footer-secondary text-primary hover:text-primary" : "text-footer"} hover:bg-primary-light hover:text-border p-1 px-2 w-52 lg:w-40 rounded bevel-normal-br`}>
                 <TextScrambleHover text="Home" className='' />
               </Link>
@@ -204,32 +205,43 @@ const Header = () => {
               <RangoliArt1 className="!w-[80vw]" />
             </div>
           </div>
-          <div className='border-l border-border lg:hidden col-start-12 col-end-13 flex flex-col items-center overflow-clip bg-primary z-10'>
-            <button className="w-full p-2.5 py-4 text-sm border-b border-border my-8 gap-2 flex items-center justify-center group" onClick={toggleSidebar}>
-              <span className='uppercase font-serif group-hover:font-medium transition-all ease-in-out'>CLOSE</span>
+          <div className=' lg:hidden col-start-12 col-end-13 flex flex-col items-center overflow-clip bg-gradient-to-r from-transparent via-primary to-primary z-10'>
+            <button className="w-full p-2.5 py-4 text-sm   my-8 gap-2 flex items-center justify-center group" onClick={toggleSidebar}>
+              <span className='uppercase  group-hover:font-medium transition-all ease-in-out'>
               <svg xmlns="http://www.w3.org/2000/svg" className='hover:stroke-2' viewBox="0 0 12.82 12.28" width="18" height="18">
-                <path d="M0.34 0.22 L12.54 12.28" className='stroke-border group-hover:stroke-border group-hover:stroke-1 transition-all divide-neutral-400 ease-in-out' stroke-width="0.5"></path>
-                <path d="M0.34 12.28 L12.54 0.22" className='stroke-border group-hover:stroke-border group-hover:stroke-1 transition-all divide-neutral-400 ease-in-out' stroke-width="0.5"></path>
-              </svg>
+                <path d="M0.34 0.22 L12.54 12.28" className='stroke-border group-hover:stroke-border group-hover:stroke-1 transition-all divide-neutral-400 ease-in-out' stroke-width="2"></path>
+                <path d="M0.34 12.28 L12.54 0.22" className='stroke-border group-hover:stroke-border group-hover:stroke-1 transition-all divide-neutral-400 ease-in-out' stroke-width="2"></path>
+              </svg></span>
             </button>
-            <div className='h-full content-center -mt-8 lg:hidden'>
+            <div className='h-full content-center -mt-8 lg:hidden  -'>
               <Image className='w-6' src={VERTICAL_RULER} alt='vertical-ruler' />
             </div>
           </div>
         </div>
 
-        <div className='absolute lg:left-16 bottom-0 flex flex-col w-[calc(100%-8%)] lg:w-full pr-1 bg-primary'>
-          <div className='p-6 lg:px-4 flex items-center gap-16 border-t border-border'>
-            <div><li className='text-xs lg:text-[9px] uppercase font-medium font-serif list-[square] whitespace-nowrap w-10'>connect</li></div>
-            <div className='flex flex-col text-xs uppercase font-medium font-serif tracking-wide'>
+        <div className='absolute lg:left-16 bottom-0 flex flex-col w-[calc(100%-8%)] lg:w-full pr-1 backdrop-blur-[.5px] bg-gradient-to-bl from-transparent  to-primary'>
+          <div className='p-6 lg:px-4 flex items-center gap-16  '>
+            <div><li className='text-md uppercase font-bold   list-[none] whitespace-nowrap w-10'>connect</li></div>
+            <div className='flex gap-10 text-md uppercase font-medium   tracking-wide justify-center items-center'>
               {/* <Link href={`https://www.linkedin.com/company/vignan-s-student-activity-council`} target='_blank'><TextScrambleHover text="linkedin" className='' /></Link> */}
-              <Link href={`https://www.instagram.com/vsac.viit`} target='_blank'><TextScrambleHover text="instagram" className='' /></Link>
-              <Link href={`mailto:yuvtarang2k25.viit@gmail.com`} target='_blank'><TextScrambleHover text="yuvtarang2k25.viit@gmail.com" className='' /></Link>
+          
+
+<a href="https://www.instagram.com/vsac.viit" className="text-black hover:scale-110 transition-all">
+                            <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                            </svg>
+                        </a>
+              
+<a href="mailto:yuvtarang2k25.viit@gmail.com" className="text-black hover:scale-110 transition-all">
+<svg className="w-8 h-8 mr-2 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            </a>
             </div>
           </div>
-          <div className='p-6 lg:px-4 flex items-center gap-16 border-t border-border'>
-            <div className='text-xs lg:text-[9px] uppercase font-medium font-serif list-[square] whitespace-nowrap w-10'>yuvtarang</div>
-            <div className='text-xs uppercase font-medium font-serif list-[square] whitespace-nowrap text-[#4d3923]'>&copy; {new Date().getFullYear()}</div>
+          <div className='p-6 lg:px-4 flex items-center gap-16 '>
+            <div className='text-sm lg:text-[9px] uppercase font-medium  list-[square] whitespace-nowrap w-10'>All rights reserved. Yuvtarang &copy; {new Date().getFullYear()}</div>
+            {/* <div className='text-xs uppercase font-medium font-serif list-[square] whitespace-nowrap text-[#4d3923]'></div> */}
           </div>
         </div>
       </div>

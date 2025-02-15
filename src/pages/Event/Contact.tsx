@@ -58,7 +58,9 @@ const Contact = () => {
     return (
         <div className="">
             <div id='contact' className="justify-items-center scroll-m-10">
-                <MagicButton title='Event Contacts' />
+                {/* <MagicButton title='Event Contacts' /> */}
+                <h2 className="text-4xl sm:text-10xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#77530a] to-yellow-800">Event Contacts</h2>
+                
                 <div className='mt-10 justify-items-center lg:justify-items-start'>
                     <div className='w-fit flex flex-wrap lg:grid lg:grid-cols-2 sm:!grid-cols-1 justify-center lg:justify-start gap-20 lg:gap-0'>
                         {mainContacts.map((section, index) => (

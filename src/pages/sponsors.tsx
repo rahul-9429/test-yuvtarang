@@ -53,8 +53,10 @@ const sponsors = () => {
             </button>
           </Link>
           <div className="flex flex-col items-center justify-center">
-            <MagicButton title='Event Sponsors' />
-            <p className='mt-3 max-w-[80rem] text-lg text-center'>Our mission wouldn't be possible without the support of our amazing sponsors! <span className='inline-block lg:hidden'>They're the true crewmates behind the scenes, fueling this hackathon with resources and opportunities.</span> A big thank you to them for helping us reach new heights!</p>
+         <h2 className="text-4xl sm:text-10xl font-bold mb-2 bg-clip-text text-[#3D2E2A] ">Our Sponsors</h2>
+
+            {/* <MagicButton title='Event Sponsors' /> */}
+            <p className='mt-3 max-w-[80rem] text- text-center'>Our mission wouldn't be possible without the support of our amazing sponsors! <span className='inline-block lg:hidden'>They're the true crewmates behind the scenes, fueling this hackathon with resources and opportunities.</span> A big thank you to them for helping us reach new heights!</p>
           </div>
         </div>
       </div>
